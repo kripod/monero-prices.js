@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+- stable
+- '5.0'
+- '4.0'
+- '0.12'
+after_script:
+- codeclimate-test-reporter < ./coverage/lcov.info
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: npm
+  email: kripod@protonmail.com
+  api_key:
+    secure: k3mTwNKKpuP+4AATidn8M2qFZMeFaYsHh2u8SG9bZhT1FI9/NC0Vbxf5le935J737aL1sGc5zu32JVS/CQW1+R4VTmbcddXcgldnl/EKdgJCVeB6Q7OhHj5bB3hg1HzNumxJmJwNP5IGa6exleLa4KeIeUq/1Fim/5WUfkfAP43U0rGwYBQ/RFAZun7k255wuqCk7dp1jC/OgqcZHOZC56vW3NGfy9PdhnZgXLcPQVXNPWVN5bDb73jv/e5dMCqCGwVSNK2JatQgx6QUSSL3mjabXH6qUFi/YpJ5C1oGsDP4g69rQ7x/rJGPXp7HC6ATjamfiM3BuDXejx0mcUtMdt677Y1VNu7zLSonp5TOTtf+CtKjAD5OXFBR+hrelY7Xs5+CHigl7ccqB0X07v/6H0m7MsVu1OP6WFAQZuPTsE4iW9P02Nfb+C9GST/F9beIby7mYeQjDI7WBRqpKlhKgZrjlAHoJs3iCxuaNiBtpJY6A/VQksqVZgkS9J35fgVJVQNvFltSVp5h/fr0fcBHzDbnZHxYoI7Hd/uylW7YCyFpiVJcI/KHH8Lmowj8VQZVdw3kWGg4/mSPUCauQI7XvTPsvkgU/1bBbp3VXF5yMeZ0jjTGPT9slqWsiqiQ/WTCgLuiCMI+mznf7fiA3T4ubzqp+Y/UKejJ13zYIaIIL0Y=
+  on:
+    tags: true
+    branch: master
+    repo: kripod/monero-prices.js
+addons:
+  code_climate:
+    repo_token:
+      secure: S/Ek4+VzX/CJvVsn/kPEVME1vR9JsXV00VqlnL0js/Bk3Mg9epcEpanBH5jpNkkINYMy6VWtaxdbuE8Rsx0hw62Zazg56EP2U0Pye7b/VhhxB4djWn/6sYTyIQe+Ocx+0e5eyDR692m8TrQ3Mgm2aZ7yqmxnUSyMksMIWdhiCULowRHv8TnH+/sy+55xKkB6935sIcTBsd4Q8akIEihyTXT4XzGs+JKM22kWXoxvQ8zBhDb9WvFgboOuHsv2Ek3d/qGhlt8H2qYskduLI9tfp3vKIaYoeWRoMnTkpNkXwyAAugWvPVK8zMLqF1D2YFa3NBBeIZQ2kso4FQa01udCZ5au/Ue+s0//CYvIMadLYTPp8WaPZmhIbKr7vpRY83pIOSMPw0t0N5L0WQB/ouBg2XN2RH6JA5TWwB6QDL0/mE4hIsWjzBZVIR4njKfLDIX1fPzGTcreEwM79fzzWp0t21j3Ws2BEK6qVfijQCIdDwsRP555fcD74Xhd0b6bBBX46ercbkeJxHLjEgHlnPZ49CqTX5sXgX+/EH38n+inKckK/DWtBacudJ/x8YnT1KTCQe/fGvlmtgc8hf3JAiVD7R1w/2PPjp3i+xjo52eoX/nC3eLs+RLayXRPxXXMQK3haAn+sCVg50pbwOI8CxQzc7FRiWWusWC3gMJ+QFb5hEw=
